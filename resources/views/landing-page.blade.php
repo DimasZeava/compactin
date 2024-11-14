@@ -11,6 +11,13 @@
 </head>
 
 <body>
+    @if (session('success'))
+        <div class="alert"
+            style="background-color: #28a745; color: white; padding: 10px; border-radius: 5px; text-align: center;">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <div class="h-screen">
         <nav class="flex px-32 py-10">
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -142,20 +149,29 @@
     </div>
     <div class="h-screen">
         <div class="flex flex-col items-center my-20">
-            <h2 class="text-4xl font-bold text-white mb-10">Request Your <span class="text-red-600">Website</span></h2>
-            <form action="" method="POST" class="flex flex-col justify-stretch w-4/6">
+            <h2 class="text-4xl font-bold text-white mb-10">Request Your <span class="text-red-600">Website</span>
+            </h2>
+            <form action="/submit-order" method="POST" class="flex flex-col justify-stretch w-4/6">
                 @csrf
                 <div class="mb-4">
                     <label for="name" class="block text-white text-sm font-bold mb-2">Name</label>
-                    <input type="text" name="name" id="name" class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent" required>
+                    <input type="text" name="name" id="name"
+                        class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent"
+                        required>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-white text-sm font-bold mb-2">Email</label>
-                    <input type="email" name="email" id="email" class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent" required>
+                    <input type="email" name="email" id="email"
+                        class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent"
+                        required>
                 </div>
                 <div class="mb-4">
-                    <label for="website_type" class="block text-white text-sm font-bold mb-2">Template</label>
-                    <select name="website_type" id="website_type" class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent" required>
+                    <label for="template" class="block text-white text-sm font-bold mb-2">Template</label>
+                    <select name="template" id="template"
+                        class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent"
+                        required>
+                        <option value="template_00">Choose your template</option>
+                        <option value="template_0">I Want Order Custom Template</option>
                         <option value="template_1">Template 1</option>
                         <option value="template_2">Template 2</option>
                         <option value="template_3">Template 3</option>
@@ -164,10 +180,14 @@
                 </div>
                 <div class="mb-4">
                     <label for="message" class="block text-white text-sm font-bold mb-2">Message</label>
-                    <textarea name="message" id="message" rows="4" class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent" required></textarea>
+                    <textarea name="message" id="message" rows="4"
+                        class="shadow appearance-none border-2 border-red-600 rounded-lg w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:border-red-950 bg-transparent"
+                        required></textarea>
                 </div>
                 <div class="flex items-center justify-center my-5">
-                    <button type="submit" class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Request Now!</button>
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Request
+                        Now!</button>
                 </div>
             </form>
         </div>
