@@ -28,12 +28,10 @@
                 <div class="flex sm:justify-stretch ">
                     <ul
                         class="flex flex-1 items-center justify-center sm:justify-center mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                        <li><a class="text-md font-semibold text-white hover:text-red-500 p-5" href="">Home</a>
+                        <li><x-link href="#">Home</x-link>
                         </li>
-                        <li><a class="text-md font-semibold text-white hover:text-red-500 p-5"
-                                href="">Template</a></li>
-                        <li><a class="text-md font-semibold text-white hover:text-red-500 p-5"
-                                href="">Request</a></li>
+                        <li><x-link href="#">Template</x-link></li>
+                        <li><x-link href="#">Request</x-link></li>
                     </ul>
                 </div>
         </nav>
@@ -43,8 +41,7 @@
                         class="text-red-600">CompactIn</span></h1>
                 <p class="text-2xl leading-7 font-light text-white text-center w-4/6">Tired with social media marketing?
                     Make your product goes online with website, be well known, and gain more customer with it!</p>
-                <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-3 px-6 rounded mt-10">Order
-                    Now!</button>
+                <x-button>Order Now!</x-button>
             </div>
         </div>
         <div class="absolute bottom-0 z-0 w-full" style="pointer-events: none;">
