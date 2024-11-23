@@ -55,80 +55,23 @@
         <div class="flex flex-col items-center my-20">
             <h2 class="text-4xl font-bold text-white mb-20">Why Request on <span class="text-red-600">Us?</span></h2>
             <div class="flex flex-col justify-stretch gap-10 px-10 w-4/5">
-                <div class="border-2 border-red-600 shadow-lg shadow-red-950 rounded-lg p-6">
-                    <div class="flex gap-5 items-center">
-                        <i class="fa-regular fa-window-maximize text-red-600 text-4xl mx-5"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-white mb-4">Optimized User Experience</h3>
-                            <p class="text-white">Our design is focusing easy to use for user and giving product
-                                information to attract potential customer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-2 border-red-600 shadow-lg shadow-red-950 rounded-lg p-6">
-                    <div class="flex gap-5 items-center">
-                        <i class="fa-regular fa-money-bill-1 text-red-600 text-4xl mx-5"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-white mb-4">Secured Payment</h3>
-                            <p class="text-white">We provide the payment when you receive our final prototype to you and
-                                you can pay to us as agreement</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-2 border-red-600 shadow-lg shadow-red-950 rounded-lg p-6">
-                    <div class="flex gap-5 items-center">
-                        <i class="fa fa-user-group text-red-600 text-4xl mx-5"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold text-white mb-4">Discussion with Us</h3>
-                            <p class="text-white">You can discuss with us from adding extra page or anything you need.
-                                Extra page from template can be charge</p>
-                        </div>
-                    </div>
-                </div>
+                <x-feature-card icon="fa-regular fa-window-maximize" title="Optimized User Experience"
+                    description="Our design is focusing easy to use for user and giving product information to attract potential customer" />
+                <x-feature-card icon="fa-regular fa-money-bill-1" title="Secured Payment"
+                    description="We provide the payment when you receive our final prototype to you and you can pay to us as agreement" />
+                <x-feature-card icon="fa-regular fa-user-group" title="Discussion with Us"
+                    description="You can discuss with us from adding extra page or anything you need. Extra page from template can be charge" />
             </div>
         </div>
     </div>
     <div class="h-screen">
         <div class="flex flex-col items-center my-20">
-            <h2 class="text-4xl font-bold text-white mb-10"><span class="text-red-600">Our</span> Portfolio</h2>
+            <h2 class="text-4xl font-bold text-white mb-10"><span class="text-red-600">Our</span> Product</h2>
             <div class="flex flex-row">
                 <div class="flex flex-row gap-10">
-                    <div class="shadow-lg shadow-red-950 rounded-lg p-6 w-60">
-                        <img src="" alt="" class="w-full h-48 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Portofolio 1</h3>
-                            <p class="text-white mb-4">Category</p>
-                            <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded">View
-                                Details</button>
-                        </div>
-                    </div>
-                    <div class="shadow-lg shadow-red-950 rounded-lg p-6 w-60">
-                        <img src="" alt="" class="w-full h-48 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Portofolio 1</h3>
-                            <p class="text-white mb-4">Category</p>
-                            <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded">View
-                                Details</button>
-                        </div>
-                    </div>
-                    <div class="shadow-lg shadow-red-950 rounded-lg p-6 w-60">
-                        <img src="" alt="" class="w-full h-48 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Portofolio 1</h3>
-                            <p class="text-white mb-4">Category</p>
-                            <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded">View
-                                Details</button>
-                        </div>
-                    </div>
-                    <div class="shadow-lg shadow-red-950 rounded-lg p-6 w-60">
-                        <img src="" alt="" class="w-full h-48 object-cover rounded-t-lg">
-                        <div class="p-4">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Portofolio 1</h3>
-                            <p class="text-white mb-4">Category</p>
-                            <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-2 px-4 rounded">View
-                                Details</button>
-                        </div>
-                    </div>
+                    @foreach ($products as $product)
+                        <x-product-card :titleProduct="$product->titleProduct" :category="$product->category->name" :imageSrc="$product->imageSrc" />
+                    @endforeach
                 </div>
             </div>
             <div class="flex flex-row items-center gap-32 mt-10">
