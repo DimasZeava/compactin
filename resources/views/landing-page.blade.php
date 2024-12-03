@@ -59,7 +59,7 @@
                     description="Our design is focusing easy to use for user and giving product information to attract potential customer" />
                 <x-feature-card icon="fa-regular fa-money-bill-1" title="Secured Payment"
                     description="We provide the payment when you receive our final prototype to you and you can pay to us as agreement" />
-                <x-feature-card icon="fa-regular fa-user-group" title="Discussion with Us"
+                <x-feature-card icon="fa-regular fa-user" title="Discussion with Us"
                     description="You can discuss with us from adding extra page or anything you need. Extra page from template can be charge" />
             </div>
         </div>
@@ -67,8 +67,8 @@
     <div class="h-screen">
         <div class="flex flex-col items-center my-20">
             <h2 class="text-4xl font-bold text-white mb-10"><span class="text-red-600">Our</span> Product</h2>
-            <div class="flex flex-row">
-                <div class="flex flex-row gap-10">
+            <div class="flex flex-row justify-center items-center">
+                <div class="flex flex-row gap-3">
                     @foreach ($products as $product)
                         <x-product-card :titleProduct="$product->titleProduct" :category="$product->category->name" :imageSrc="$product->imageSrc" />
                     @endforeach
