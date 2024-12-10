@@ -70,11 +70,11 @@
             <div class="flex flex-row justify-center items-center">
                 <div class="flex flex-row gap-3">
                     @foreach ($products as $product)
-                        <x-product-card :titleProduct="$product->titleProduct" :category="$product->category->name" :imageSrc="$product->imageSrc" />
+                        <x-product-card :titleProduct="$product->titleProduct" :category="$product->category->name" :imageSrc="$product->imageSrc" :link="$product->link" />
                     @endforeach
                 </div>
             </div>
-            <div class="flex flex-row items-center gap-32 mt-10">
+            {{-- <div class="flex flex-row items-center gap-32 mt-10">
                 <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-3 px-5 rounded-full"><i
                         class="fa fa-chevron-left"></i></button>
                 <div class="flex gap-2">
@@ -84,7 +84,7 @@
                 </div>
                 <button class="bg-red-600 hover:bg-red-900 text-white font-bold py-3 px-5 rounded-full"><i
                         class="fa fa-chevron-right"></i></button>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="h-screen">

@@ -15,33 +15,37 @@ class ProductController extends Controller
         if ($products->isEmpty()) {
             $products = collect([
                 (object)[
-                    'titleProduct' => 'Product 1',
+                    'titleProduct' => 'Automotive Landing Page',
                     'category' => (object)[
-                        'name' => 'Category 1'
+                        'name' => 'React'
                     ],
-                    'imageSrc' => 'https://via.placeholder.com/150'
+                    'imageSrc' => asset('images/product/product1.png'),
+                    'link' => 'https://dribbble.com/shots/24879759-Automotive-Company-Profile'
                 ],
                 (object)[
-                    'titleProduct' => 'Product 2',
+                    'titleProduct' => 'Drink Landing Page',
                     'category' => (object)[
-                        'name' => 'Category 2'
+                        'name' => 'React'
                     ],
-                    'imageSrc' => 'https://via.placeholder.com/150'
+                    'imageSrc' => asset('images/product/product2.png'),
+                    'link' => 'https://dribbble.com/shots/24448168-ProShow-Profile-Drink-Company'
                 ],
                 (object)[
-                    'titleProduct' => 'Product 3',
+                    'titleProduct' => 'Tech Landing Page',
                     'category' => (object)[
-                        'name' => 'Category 3'
+                        'name' => 'Laravel'
                     ],
-                    'imageSrc' => 'https://via.placeholder.com/150'
+                    'imageSrc' => asset('images/product/product3.png'),
+                    'link' => 'https://dribbble.com/shots/24591438-FATE-Tech-Company-Profile'
                 ],
                 (object)[
-                    'titleProduct' => 'Product 4',
+                    'titleProduct' => 'Unavailable',
                     'category' => (object)[
-                        'name' => 'Category 4'
+                        'name' => 'Unavailable'
                     ],
-                    'imageSrc' => 'https://via.placeholder.com/150'
-                ],
+                    'imageSrc' => 'https://via.placeholder.com/150',
+                    'link' => 'https://example.com/product-4'
+                ]
             ]);
 
             $products = new LengthAwarePaginator(
