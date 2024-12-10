@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
     @vite('resources/css/app.css')
+    <link rel="icon" href="{{ asset('images/compactin-logo.svg') }}" type="image/svg+xml">
     <title>Compactin</title>
 </head>
 
