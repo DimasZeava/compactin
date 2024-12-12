@@ -29,7 +29,7 @@ class PostEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('compactin@gmail.com', 'Jeffrey Way'),
+            from: new Address('compactin@gmail.com', 'System'),
             replyTo: [
                 new Address('compactin@gmail.com', 'Taylor Otwell'),
             ],

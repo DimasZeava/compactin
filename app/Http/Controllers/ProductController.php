@@ -39,11 +39,11 @@ class ProductController extends Controller
                     'link' => 'https://dribbble.com/shots/24591438-FATE-Tech-Company-Profile'
                 ],
                 (object)[
-                    'titleProduct' => 'Unavailable',
+                    'titleProduct' => 'Coming Soon!!',
                     'category' => (object)[
-                        'name' => 'Unavailable'
+                        'name' => 'On Progress'
                     ],
-                    'imageSrc' => 'https://via.placeholder.com/150',
+                    'imageSrc' => asset('images/product/product4.jpg'),
                     'link' => 'https://example.com/product-4'
                 ]
             ]);

@@ -44,9 +44,8 @@
 
 <body>
     <div class="container">
-        <div class="header">Hello, you got a new order!</div>
+        <div class="header">Hello, you have received a new order!</div>
         <div class="content">
-            <h1>Hello, you have received a new order!</h1>
             <p><strong>Name:</strong> {{ $orderData['name'] }}</p>
             <p><strong>Email:</strong> {{ $orderData['email'] }}</p>
             <p><strong>Template:</strong> {{ $orderData['template'] }}</p>
